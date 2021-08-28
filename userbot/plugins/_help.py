@@ -24,7 +24,7 @@ async def cmd_list(event):
     input_str = event.pattern_match.group(1)
     if input_str == "text":
         string = (
-            "Total {count} commands found in {plugincount} plugins of Icssbot\n\n"
+            "Total {count} commands found in {plugincount} plugins of STRIP\n\n"
         )
         catcount = 0
         plugincount = 0
