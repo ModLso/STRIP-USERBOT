@@ -24,11 +24,11 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         tosh = re.compile("secret (.*) (.*)")
         match = re.findall(tosh, query)
-        if query.startswith("**IcssBot") and event.query.user_id == bot.uid:
+        if query.startswith("**STRIP") and event.query.user_id == bot.uid:
             buttons = [
                 (
                     custom.Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/ANL0KE/ICSS-USERBOT"),
+                    Button.url("Repo", "https://github.com/ModLso/STRIP-USERBOT"),
                 )
             ]
             if TOSH and TOSH.endswith((".jpg", ".png")):
@@ -40,13 +40,13 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif TOSH:
                 result = builder.document(
                     TOSH,
-                    title="Icss Alive",
+                    title="STRIP Alive",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Icss Alive",
+                    title=STRIP Alive",
                     text=query,
                     buttons=buttons,
                 )
@@ -155,7 +155,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             buttons = paginate_help(current_page_number + 1, CMD_LIST, "helpme")
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت اكسس للحصول عليه اذهب الى @rruuurr. "
+            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت سترايب للحصول عليه اذهب الى @ModLso. "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(
@@ -187,7 +187,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
                     encrypted_tcxt = message["text"]
                     reply_pop_up_alert = encrypted_tcxt
                 else:
-                    reply_pop_up_alert = "⌔∮ عليك الحصول على بوت اكسس للحصول عليه اذهب الى @rruuurr. "
+                    reply_pop_up_alert = "⌔∮ عليك الحصول على بوت سترايب للحصول عليه اذهب الى @ModLso. "
             except KeyError:
                 reply_pop_up_alert = "⌔∮ هذه الرسالة لم تعد موجودة في خادم بوت"
         else:
@@ -229,7 +229,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
                         caption=plugin_name,
                     )
         else:
-            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت اكسس للحصول عليه اذهب الى @rruuurr. "
+            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت سترايب للحصول عليه اذهب الى @ModLso. "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
@@ -237,7 +237,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id == bot.uid:
             await event.edit("**⌔∮ تم اغلاق القائمه**")
         else:
-            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت اكسس للحصول عليه اذهب الى @rruuurr. "
+            reply_pop_up_alert = "⌔∮ عليك الحصول على بوت سترايب للحصول عليه اذهب الى @ModLso. "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"stats")))
